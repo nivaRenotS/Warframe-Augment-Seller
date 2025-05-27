@@ -81,13 +81,22 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-I wanted to see what the trends in warframe augment mods are and the best selling. Right now (April 2025) Yareli Prime is out and as you can expect her mods are surging in popularity. 
+This tool analyzes market trends for Warframe augment mods, helping players identify the most popular and profitable mods to trade. The dashboard provides real-time market data visualization, showing pricing trends and popularity shifts.
+
+Current Insights (April 2025): With Yareli Prime's recent release, her augment mods are soaring in price increases and trading volume. 
 ![usage_graph](https://github.com/user-attachments/assets/44cf8133-7532-4536-97cf-4c39fc5f9599)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+### Key Features
+
+* Track market prices for all Warframe augment mods
+* Visualize popularity trends over time
+* Identify investment opportunities
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
@@ -101,22 +110,21 @@ I wanted to see what the trends in warframe augment mods are and the best sellin
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Simply download the wf_augment_seller.exe and run it! Below is how to install it yourself.
+* Download the pre-built wf_augment_seller.exe
+* Run the executable 
 
 
 ### Local Installation
 
-1. Download as a Zip ad unzip
-2. Download a Python IDE
-3. Open the folder in the IDE
-4. Install PyInstaller in the Python Terminal
+1. Clone the repository or download as a ZIP file and extract
+2. Install Python 3.8+ if not already installed
+3. Open the folder in your preferred Python IDE (PyCharm recommended)
+4. To create your own executable:
    ```sh
    pip install pyinstaller
-   ```
-5. Create the executable with the following command
-   ```sh
    pyinstaller --noconsole --onefile --icon=favicon.ico wf_gui.py
    ```
+The executable will be created in the dist folder
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -125,8 +133,15 @@ Simply download the wf_augment_seller.exe and run it! Below is how to install it
 <!-- USAGE EXAMPLES -->
 ## Usage
 
- When DE adds more augments in the future simply go to https://wiki.warframe.com/w/Template:AugmentNav?action=edit and copy and paste all of the markdown into a .txt file. Then click the Load mods from file and browse to the text file containing the markdown.
+### Updating Mod Database
 
+Since the Warframe Market API does not have catagories like "augments" to directly pull from the API, when DE adds new augments they have to be manually loaded
+
+1. Go to https://wiki.warframe.com/w/Template:AugmentNav?action=edit
+2. Copy all markdown content
+3. Paste into a new text file
+4. In the application, click "Load mods from file"
+5. Browse to and select your saved text file
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -142,7 +157,21 @@ Simply download the wf_augment_seller.exe and run it! Below is how to install it
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## FAQ
 
+Q: Why is it so slow to Analyze Mods 
+* A: Warframe API has a rate limit of 3 calls per sec to the API, therefore getting 90 days of trade history for an item takes a while.
+
+Q: How often is the market data updated?
+* A: The tool pulls fresh market data each time you analyze.
+
+Q: Does this work for console markets?
+* A: Currently the tool tracks PC market prices only.
+
+Q: Is this against Warframe's Terms of Service?
+* A: No, this tool only analyzes publicly available market data and doesn't interact with the game.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 ## Contributing
